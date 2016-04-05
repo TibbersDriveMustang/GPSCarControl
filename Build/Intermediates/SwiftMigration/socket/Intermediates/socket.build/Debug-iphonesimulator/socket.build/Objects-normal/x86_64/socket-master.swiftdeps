@@ -1,0 +1,10 @@
+version: "Apple Swift version 2.0 (swiftlang-700.0.59 clang-700.0.72)"
+options: "c74af53e4b3e27c51b63691dad26c85c"
+build_time: [510894711, 917502000]
+inputs: 
+	"/Users/Tibbers/Google Drive/2016Spring/RealTimeSystems/project/test/Socket-Implement/socket/socket/ysocket/TCPServer.swift": [494323894, 0]
+	"/Users/Tibbers/Google Drive/2016Spring/RealTimeSystems/project/test/Socket-Implement/socket/socket/TCPClientViewController.swift": [494323894, 0]
+	"/Users/Tibbers/Google Drive/2016Spring/RealTimeSystems/project/test/Socket-Implement/socket/socket/AppDelegate.swift": [494323894, 0]
+	"/Users/Tibbers/Google Drive/2016Spring/RealTimeSystems/project/test/Socket-Implement/socket/socket/TCPServerViewController.swift": [494323894, 0]
+	"/Users/Tibbers/Google Drive/2016Spring/RealTimeSystems/project/test/Socket-Implement/socket/socket/ysocket/Socket.swift": [494323894, 0]
+	"/Users/Tibbers/Google Drive/2016Spring/RealTimeSystems/project/test/Socket-Implement/socket/socket/ysocket/TCPClient.swift": [494323894, 0]

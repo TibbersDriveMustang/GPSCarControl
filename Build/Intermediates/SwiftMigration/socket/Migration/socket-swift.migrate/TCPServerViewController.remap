@@ -1,0 +1,8 @@
+[
+ {
+  "file": "/Users/Tibbers/Google Drive/2016Spring/RealTimeSystems/project/test/Socket-Implement/socket/socket/TCPServerViewController.swift",
+  "offset": 909,
+  "remove": 934,
+  "text": "Int(self.port.text)!)\n        self.server.delegate = self\n        \n        self.server.start()\n        \n    }\n    \n    @IBAction func sendMsg(sender: AnyObject) {\n        if let sv = self.server {\n            sv.send(self.sendedMsg.text!)\n        }\n    }\n\n    func alert(title: String, msg: String) {\n        let alert = UIAlertController(title: title, message: msg, preferredStyle: UIAlertControllerStyle.Alert)\n        alert.addAction(UIAlertAction(title: \"OK\", style: UIAlertActionStyle.Default, handler: nil))\n        \n        self.presentViewController(alert, animated: true, completion: nil)\n    }\n}\n\nextension TCPServerViewController: TCPServerDelegate {\n    \n    func server(server: TCPServer, serverIsWorking isWorking: Bool) {\n        print(isWorking)\n        \n        alert(\"Alert\", msg: \"server is work: \\(isWorking)\")\n    }\n    \n    func server(server: TCPServer, connectedClient client: TCPClient) {\n        print",
+ }
+]

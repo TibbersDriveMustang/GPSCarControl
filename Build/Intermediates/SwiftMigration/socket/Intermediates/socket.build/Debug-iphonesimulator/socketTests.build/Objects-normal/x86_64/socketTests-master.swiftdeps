@@ -1,0 +1,5 @@
+version: "Apple Swift version 2.0 (swiftlang-700.0.59 clang-700.0.72)"
+options: "6d7af7e0ca4299a09a1e6978153e65de"
+build_time: [510894733, 958714000]
+inputs: 
+	"/Users/Tibbers/Google Drive/2016Spring/RealTimeSystems/project/test/Socket-Implement/socket/socketTests/socketTests.swift": [494323894, 0]

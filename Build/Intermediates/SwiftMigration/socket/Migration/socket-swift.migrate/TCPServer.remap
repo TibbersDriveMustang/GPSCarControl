@@ -1,0 +1,8 @@
+[
+ {
+  "file": "/Users/Tibbers/Google Drive/2016Spring/RealTimeSystems/project/test/Socket-Implement/socket/socket/ysocket/TCPServer.swift",
+  "offset": 448,
+  "remove": 506,
+  "text": "port: Int32(self.port))\n        \n        var isWorking = false\n        if fd > 0 {\n            self.fd = fd\n            isWorking = true\n            \n            dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_BACKGROUND, 0)) { [weak self] in\n                while self != nil {\n                    \n                    var buff: [Int8] = [Int8](count: 16, repeatedValue: 0x0)\n                    var port:Int32 = 0\n                    var clientfd: Int32 = c_ytcpsocket_accept(self!.fd!, ip: &buff, port:",
+ }
+]

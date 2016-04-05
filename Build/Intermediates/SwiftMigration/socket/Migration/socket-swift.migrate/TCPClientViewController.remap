@@ -1,0 +1,8 @@
+[
+ {
+  "file": "/Users/Tibbers/Google Drive/2016Spring/RealTimeSystems/project/test/Socket-Implement/socket/socket/TCPClientViewController.swift",
+  "offset": 851,
+  "remove": 809,
+  "text": "Int(self.serverPort.text)!)\n        self.client.delegate = self\n        \n        self.client.connectServer(timeout: 10)\n        \n    }\n    \n    @IBAction func send(sender: UIButton) {\n        let rst = self.client.send(str: self.sendedMsg.text!)\n        \n        print(\"send data: \\(rst)\")\n    }\n    \n    func alert(title: String, msg: String) {\n        let alert = UIAlertController(title: title, message: msg, preferredStyle: UIAlertControllerStyle.Alert)\n        alert.addAction(UIAlertAction(title: \"OK\", style: UIAlertActionStyle.Default, handler: nil))\n        \n        self.presentViewController(alert, animated: true, completion: nil)\n    }\n\n}\n\nextension TCPClientViewController: TCPClientDelegate {\n    func client(client: TCPClient, connectSververState state: ClientState) {\n        print(state, terminator: \"\"",
+ }
+]
