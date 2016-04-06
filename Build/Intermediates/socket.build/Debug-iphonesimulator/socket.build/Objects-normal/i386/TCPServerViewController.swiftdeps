@@ -7,44 +7,44 @@ provides-member:
 - ["C6socket23TCPServerViewController", ""]
 provides-dynamic-lookup:
 - "localIP"
+- "alert"
 - "bind"
 - "sendMsg"
 - "textFieldShouldReturn"
 - "receivedMsg"
-- "port"
-- "alert"
 - "viewDidLoad"
+- "port"
 - "sendedMsg"
 depends-top-level:
-- "AnyObject"
-- !private "BooleanLiteralType"
-- "NSData"
-- "TCPServer"
-- !private "NSString"
-- "UITextField"
-- !private "print"
-- "TCPClient"
-- !private "UIAlertControllerStyle"
-- "UIViewController"
-- "String"
-- "UITextFieldDelegate"
-- !private "Int"
-- "UIButton"
-- !private "!="
-- !private "dispatch_async"
-- !private "dispatch_get_main_queue"
-- "TCPServerViewController"
-- "TCPServerDelegate"
-- !private "NSUTF8StringEncoding"
-- !private "UIAlertActionStyle"
 - "Bool"
 - "UILabel"
-- "UnicodeScalarType"
-- !private "StringLiteralType"
-- !private "IPAddress"
-- !private "UIAlertAction"
-- !private "=="
+- !private "Int"
+- "String"
 - !private "UIAlertController"
+- !private "UIAlertActionStyle"
+- "AnyObject"
+- !private "!="
+- !private "dispatch_async"
+- !private "NSString"
+- "TCPServer"
+- !private "UIAlertAction"
+- !private "StringLiteralType"
+- !private "=="
+- "UITextFieldDelegate"
+- "UIViewController"
+- "TCPClient"
+- "UIButton"
+- "TCPServerViewController"
+- "UnicodeScalarType"
+- !private "dispatch_get_main_queue"
+- !private "print"
+- "NSData"
+- "TCPServerDelegate"
+- !private "UIAlertControllerStyle"
+- "UITextField"
+- !private "IPAddress"
+- !private "BooleanLiteralType"
+- !private "NSUTF8StringEncoding"
 depends-member:
 - !private ["PSs9AnyObject", "IPAddress"]
 - !private ["PSs9AnyObject", "Int"]
@@ -355,6 +355,7 @@ depends-member:
 - !private ["CSo8NSObject", "addAction"]
 - ["CSo8NSObject", "alert"]
 - ["CSo8NSObject", "bind"]
+- !private ["CSo8NSObject", "deinit"]
 - !private ["CSo8NSObject", "delegate"]
 - !private ["CSo8NSObject", "dispatch_async"]
 - !private ["CSo8NSObject", "dispatch_get_main_queue"]
@@ -415,7 +416,6 @@ depends-member:
 - ["PSo16NSObjectProtocol", "viewDidLoad"]
 - ["PSo16NSObjectProtocol", ""]
 - !private ["PSo14NSSecureCoding", "init"]
-- !private ["CSo8NSString", "deinit"]
 - !private ["CSo8NSString", "init"]
 - ["PSs21NilLiteralConvertible", "Some"]
 - ["Sq", "Some"]
@@ -845,7 +845,6 @@ depends-member:
 - ["PSs21_ObjectiveCBridgeable", "Some"]
 - !private ["PSs21_ObjectiveCBridgeable", "_getBuiltinLogicValue"]
 - !private ["PSs21_ObjectiveCBridgeable", "init"]
-- !private ["VSs26_OptionalNilComparisonType", "deinit"]
 - !private ["PSs22_RandomAccessAmbiguity", "init"]
 - ["PSs12_Reflectable", "Some"]
 - !private ["PSs12_Reflectable", "_getBuiltinLogicValue"]
@@ -950,7 +949,6 @@ depends-nominal:
 - !private "PSs22_IntegerArithmeticType"
 - !private "PSs12_IntegerType"
 - "PSs21_ObjectiveCBridgeable"
-- !private "VSs26_OptionalNilComparisonType"
 - !private "PSs22_RandomAccessAmbiguity"
 - "PSs12_Reflectable"
 - !private "PSs18_SignedIntegerType"
