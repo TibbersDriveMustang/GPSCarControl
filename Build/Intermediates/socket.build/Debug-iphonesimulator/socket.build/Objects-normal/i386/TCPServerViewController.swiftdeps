@@ -6,44 +6,45 @@ provides-nominal:
 provides-member:
 - ["C6socket23TCPServerViewController", ""]
 provides-dynamic-lookup:
-- "alert"
-- "viewDidLoad"
-- "bind"
-- "sendedMsg"
-- "textFieldShouldReturn"
-- "sendMsg"
 - "localIP"
+- "bind"
+- "sendMsg"
+- "textFieldShouldReturn"
 - "receivedMsg"
 - "port"
+- "alert"
+- "viewDidLoad"
+- "sendedMsg"
 depends-top-level:
-- "UITextField"
+- "AnyObject"
+- !private "BooleanLiteralType"
 - "NSData"
-- "TCPServerViewController"
-- "Bool"
+- "TCPServer"
+- !private "NSString"
+- "UITextField"
+- !private "print"
+- "TCPClient"
 - !private "UIAlertControllerStyle"
+- "UIViewController"
+- "String"
+- "UITextFieldDelegate"
+- !private "Int"
 - "UIButton"
 - !private "!="
-- !private "NSUTF8StringEncoding"
-- "TCPClient"
-- !private "IPAddress"
-- !private "UnicodeScalarType"
 - !private "dispatch_async"
 - !private "dispatch_get_main_queue"
-- "TCPServer"
-- !private "BooleanLiteralType"
-- "UIViewController"
-- !private "Int"
-- !private "print"
-- !private "UIAlertAction"
-- "String"
-- !private "UIAlertController"
-- !private "NSString"
-- "UILabel"
-- "AnyObject"
-- "UITextFieldDelegate"
-- !private "UIAlertActionStyle"
-- !private "StringLiteralType"
+- "TCPServerViewController"
 - "TCPServerDelegate"
+- !private "NSUTF8StringEncoding"
+- !private "UIAlertActionStyle"
+- "Bool"
+- "UILabel"
+- "UnicodeScalarType"
+- !private "StringLiteralType"
+- !private "IPAddress"
+- !private "UIAlertAction"
+- !private "=="
+- !private "UIAlertController"
 depends-member:
 - !private ["PSs9AnyObject", "IPAddress"]
 - !private ["PSs9AnyObject", "Int"]
@@ -414,6 +415,7 @@ depends-member:
 - ["PSo16NSObjectProtocol", "viewDidLoad"]
 - ["PSo16NSObjectProtocol", ""]
 - !private ["PSo14NSSecureCoding", "init"]
+- !private ["CSo8NSString", "deinit"]
 - !private ["CSo8NSString", "init"]
 - ["PSs21NilLiteralConvertible", "Some"]
 - ["Sq", "Some"]
@@ -843,6 +845,7 @@ depends-member:
 - ["PSs21_ObjectiveCBridgeable", "Some"]
 - !private ["PSs21_ObjectiveCBridgeable", "_getBuiltinLogicValue"]
 - !private ["PSs21_ObjectiveCBridgeable", "init"]
+- !private ["VSs26_OptionalNilComparisonType", "deinit"]
 - !private ["PSs22_RandomAccessAmbiguity", "init"]
 - ["PSs12_Reflectable", "Some"]
 - !private ["PSs12_Reflectable", "_getBuiltinLogicValue"]
@@ -947,6 +950,7 @@ depends-nominal:
 - !private "PSs22_IntegerArithmeticType"
 - !private "PSs12_IntegerType"
 - "PSs21_ObjectiveCBridgeable"
+- !private "VSs26_OptionalNilComparisonType"
 - !private "PSs22_RandomAccessAmbiguity"
 - "PSs12_Reflectable"
 - !private "PSs18_SignedIntegerType"

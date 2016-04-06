@@ -75,10 +75,15 @@ extension TCPServerViewController: TCPServerDelegate {
     
     func server(server: TCPServer, client: TCPClient, receivedData data: NSData) {
         
+        var packet:NSString?
         if let msg = NSString(data: data, encoding: NSUTF8StringEncoding) {
             dispatch_async(dispatch_get_main_queue()) { [weak self] in
                 self?.receivedMsg.text = "\(client.addr):\(msg)"
+                packet = msg
             }
+        }
+        if packet == "setUpPeerToPeer"{
+            self.alert("Processing", msg: "Setting up peer to peer")
         }
     }
 }
