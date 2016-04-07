@@ -143,6 +143,7 @@ SWIFT_CLASS("_TtC6socket23TCPServerViewController")
 @property (nonatomic, weak) IBOutlet UITextField * __null_unspecified port;
 @property (nonatomic, weak) IBOutlet UITextField * __null_unspecified sendedMsg;
 @property (nonatomic, weak) IBOutlet UILabel * __null_unspecified receivedMsg;
+@property (nonatomic, copy) NSString * __null_unspecified clientIP;
 - (void)viewDidLoad;
 - (IBAction)bind:(UIButton * __nonnull)sender;
 - (IBAction)sendMsg:(id __nonnull)sender;

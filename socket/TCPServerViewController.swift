@@ -20,6 +20,12 @@ class TCPServerViewController: UIViewController {
     
     var server: TCPServer!
     
+    var client: TCPClient!
+    
+    var clientIP: String!
+    
+    var clientPort: Int!
+    
     override func viewDidLoad() {
         let ipUtil = IPAddress()
         
@@ -28,6 +34,10 @@ class TCPServerViewController: UIViewController {
         self.receivedMsg.text = nil
         self.port.delegate = self
         self.sendedMsg.delegate = self
+        
+        
+
+
     }
     
     @IBAction func bind(sender: UIButton) {
@@ -79,8 +89,24 @@ extension TCPServerViewController: TCPServerDelegate {
             dispatch_async(dispatch_get_main_queue()) { [weak self] in
                 self?.receivedMsg.text = "\(client.addr):\(msg)"
                 print(msg)
+                print("client port is:")
+                print(client.port)
                 if msg == "setPeerToPeer" {
                     self!.alert("Alert", msg: "Setting up peer to peer")
+                    
+                    if self?.client != nil{
+                        self?.client.close()
+                    }
+                    self?.clientIP = client.addr
+                    self?.clientPort = client.port
+                    
+                    self!.client = TCPClient(addr: self!.clientIP, port: self!.clientPort)
+                    self?.client.connectServer(timeout: 10)
+                    
+                    // To be continue
+                    
+                    
+                    
                 }
             }
         }
