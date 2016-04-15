@@ -103,11 +103,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "socket/TCPServerViewController.swift"
-            timestampString = "481685694.263593"
+            timestampString = "482380235.551589"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "54"
-            endingLineNumber = "54"
+            startingLineNumber = "57"
+            endingLineNumber = "57"
             landmarkName = "bind(_:)"
             landmarkType = "5">
          </BreakpointContent>

@@ -6,46 +6,47 @@ provides-nominal:
 provides-member:
 - ["C6socket23TCPServerViewController", ""]
 provides-dynamic-lookup:
-- "viewDidLoad"
-- "port"
-- "receivedMsg"
-- "bind"
-- "alert"
-- "textFieldShouldReturn"
-- "sendedMsg"
 - "sendMsg"
-- "clientIP"
 - "localIP"
+- "bind"
+- "receivedMsg"
+- "alert"
+- "carIP"
+- "textFieldShouldReturn"
+- "port"
+- "clientIP"
+- "sendedMsg"
+- "viewDidLoad"
 depends-top-level:
-- !private "StringLiteralType"
+- !private "UIAlertController"
+- "TCPServer"
+- !private "print"
+- !private "UIAlertActionStyle"
+- "UILabel"
+- "NSData"
+- "String"
+- "Int"
+- !private "NSString"
+- "TCPClient"
+- "UITextFieldDelegate"
+- "UnicodeScalarType"
+- "UIViewController"
+- "Bool"
 - "UIButton"
+- !private "BooleanLiteralType"
 - !private "IPAddress"
 - !private "UIAlertAction"
-- !private "NSString"
 - "TCPServerDelegate"
-- !private "dispatch_get_main_queue"
-- "String"
-- "UITextField"
-- "Int"
-- "TCPServerViewController"
-- "AnyObject"
-- !private "UIAlertActionStyle"
-- !private "!="
-- !private "NSUTF8StringEncoding"
 - !private "=="
-- !private "UIAlertControllerStyle"
-- "TCPClient"
-- !private "UIAlertController"
-- "UILabel"
+- "TCPServerViewController"
+- !private "NSUTF8StringEncoding"
+- !private "dispatch_get_main_queue"
+- "UITextField"
+- !private "StringLiteralType"
 - !private "dispatch_async"
-- "Bool"
-- "UnicodeScalarType"
-- "TCPServer"
-- !private "BooleanLiteralType"
-- "NSData"
-- "UITextFieldDelegate"
-- !private "print"
-- "UIViewController"
+- !private "!="
+- !private "UIAlertControllerStyle"
+- "AnyObject"
 depends-member:
 - !private ["PSs9AnyObject", "IPAddress"]
 - !private ["PSs9AnyObject", "Int"]
@@ -61,6 +62,7 @@ depends-member:
 - !private ["PSs9AnyObject", "addr"]
 - ["PSs9AnyObject", "alert"]
 - ["PSs9AnyObject", "bind"]
+- ["PSs9AnyObject", "carIP"]
 - ["PSs9AnyObject", "client"]
 - ["PSs9AnyObject", "clientIP"]
 - ["PSs9AnyObject", "clientPort"]
@@ -111,6 +113,7 @@ depends-member:
 - !private ["PSs11CVarArgType", "addAction"]
 - ["PSs11CVarArgType", "alert"]
 - ["PSs11CVarArgType", "bind"]
+- ["PSs11CVarArgType", "carIP"]
 - ["PSs11CVarArgType", "client"]
 - ["PSs11CVarArgType", "clientIP"]
 - ["PSs11CVarArgType", "clientPort"]
@@ -157,6 +160,7 @@ depends-member:
 - !private ["PSs23CustomStringConvertible", "addAction"]
 - ["PSs23CustomStringConvertible", "alert"]
 - ["PSs23CustomStringConvertible", "bind"]
+- ["PSs23CustomStringConvertible", "carIP"]
 - ["PSs23CustomStringConvertible", "client"]
 - ["PSs23CustomStringConvertible", "clientIP"]
 - ["PSs23CustomStringConvertible", "clientPort"]
@@ -201,6 +205,7 @@ depends-member:
 - !private ["PSs9Equatable", "addAction"]
 - ["PSs9Equatable", "alert"]
 - ["PSs9Equatable", "bind"]
+- ["PSs9Equatable", "carIP"]
 - ["PSs9Equatable", "client"]
 - ["PSs9Equatable", "clientIP"]
 - ["PSs9Equatable", "clientPort"]
@@ -247,6 +252,7 @@ depends-member:
 - !private ["PSs8Hashable", "addAction"]
 - ["PSs8Hashable", "alert"]
 - ["PSs8Hashable", "bind"]
+- ["PSs8Hashable", "carIP"]
 - ["PSs8Hashable", "client"]
 - ["PSs8Hashable", "clientIP"]
 - ["PSs8Hashable", "clientPort"]
@@ -301,6 +307,7 @@ depends-member:
 - !private ["PSo8NSCoding", "addAction"]
 - ["PSo8NSCoding", "alert"]
 - ["PSo8NSCoding", "bind"]
+- ["PSo8NSCoding", "carIP"]
 - ["PSo8NSCoding", "client"]
 - ["PSo8NSCoding", "clientIP"]
 - ["PSo8NSCoding", "clientPort"]
@@ -341,6 +348,7 @@ depends-member:
 - !private ["PSo26NSExtensionRequestHandling", "addAction"]
 - ["PSo26NSExtensionRequestHandling", "alert"]
 - ["PSo26NSExtensionRequestHandling", "bind"]
+- ["PSo26NSExtensionRequestHandling", "carIP"]
 - ["PSo26NSExtensionRequestHandling", "client"]
 - ["PSo26NSExtensionRequestHandling", "clientIP"]
 - ["PSo26NSExtensionRequestHandling", "clientPort"]
@@ -385,6 +393,7 @@ depends-member:
 - !private ["CSo8NSObject", "addAction"]
 - ["CSo8NSObject", "alert"]
 - ["CSo8NSObject", "bind"]
+- ["CSo8NSObject", "carIP"]
 - ["CSo8NSObject", "client"]
 - ["CSo8NSObject", "clientIP"]
 - ["CSo8NSObject", "clientPort"]
@@ -425,6 +434,7 @@ depends-member:
 - !private ["PSo16NSObjectProtocol", "addAction"]
 - ["PSo16NSObjectProtocol", "alert"]
 - ["PSo16NSObjectProtocol", "bind"]
+- ["PSo16NSObjectProtocol", "carIP"]
 - ["PSo16NSObjectProtocol", "client"]
 - ["PSo16NSObjectProtocol", "clientIP"]
 - ["PSo16NSObjectProtocol", "clientPort"]
@@ -501,6 +511,7 @@ depends-member:
 - !private ["P6socket17TCPServerDelegate", "UIAlertController"]
 - !private ["P6socket17TCPServerDelegate", "UIAlertControllerStyle"]
 - !private ["P6socket17TCPServerDelegate", "alert"]
+- !private ["P6socket17TCPServerDelegate", "carIP"]
 - !private ["P6socket17TCPServerDelegate", "client"]
 - !private ["P6socket17TCPServerDelegate", "clientIP"]
 - !private ["P6socket17TCPServerDelegate", "clientPort"]
@@ -540,6 +551,7 @@ depends-member:
 - ["C6socket23TCPServerViewController", "UITextField"]
 - ["C6socket23TCPServerViewController", "alert"]
 - ["C6socket23TCPServerViewController", "bind"]
+- ["C6socket23TCPServerViewController", "carIP"]
 - ["C6socket23TCPServerViewController", "client"]
 - ["C6socket23TCPServerViewController", "clientIP"]
 - ["C6socket23TCPServerViewController", "clientPort"]
@@ -587,6 +599,7 @@ depends-member:
 - !private ["PSo21UIAppearanceContainer", "addAction"]
 - ["PSo21UIAppearanceContainer", "alert"]
 - ["PSo21UIAppearanceContainer", "bind"]
+- ["PSo21UIAppearanceContainer", "carIP"]
 - ["PSo21UIAppearanceContainer", "client"]
 - ["PSo21UIAppearanceContainer", "clientIP"]
 - ["PSo21UIAppearanceContainer", "clientPort"]
@@ -626,6 +639,7 @@ depends-member:
 - !private ["PSo18UIContentContainer", "addAction"]
 - ["PSo18UIContentContainer", "alert"]
 - ["PSo18UIContentContainer", "bind"]
+- ["PSo18UIContentContainer", "carIP"]
 - ["PSo18UIContentContainer", "client"]
 - ["PSo18UIContentContainer", "clientIP"]
 - ["PSo18UIContentContainer", "clientPort"]
@@ -671,6 +685,7 @@ depends-member:
 - !private ["PSo18UIFocusEnvironment", "addAction"]
 - ["PSo18UIFocusEnvironment", "alert"]
 - ["PSo18UIFocusEnvironment", "bind"]
+- ["PSo18UIFocusEnvironment", "carIP"]
 - ["PSo18UIFocusEnvironment", "client"]
 - ["PSo18UIFocusEnvironment", "clientIP"]
 - ["PSo18UIFocusEnvironment", "clientPort"]
@@ -721,6 +736,7 @@ depends-member:
 - !private ["CSo11UIResponder", "addAction"]
 - ["CSo11UIResponder", "alert"]
 - ["CSo11UIResponder", "bind"]
+- ["CSo11UIResponder", "carIP"]
 - ["CSo11UIResponder", "client"]
 - ["CSo11UIResponder", "clientIP"]
 - ["CSo11UIResponder", "clientPort"]
@@ -759,6 +775,7 @@ depends-member:
 - !private ["PSo16UIStateRestoring", "addAction"]
 - ["PSo16UIStateRestoring", "alert"]
 - ["PSo16UIStateRestoring", "bind"]
+- ["PSo16UIStateRestoring", "carIP"]
 - ["PSo16UIStateRestoring", "client"]
 - ["PSo16UIStateRestoring", "clientIP"]
 - ["PSo16UIStateRestoring", "clientPort"]
@@ -796,6 +813,7 @@ depends-member:
 - !private ["PSo19UITextFieldDelegate", "UIAlertController"]
 - !private ["PSo19UITextFieldDelegate", "UIAlertControllerStyle"]
 - !private ["PSo19UITextFieldDelegate", "alert"]
+- !private ["PSo19UITextFieldDelegate", "carIP"]
 - !private ["PSo19UITextFieldDelegate", "client"]
 - !private ["PSo19UITextFieldDelegate", "clientIP"]
 - !private ["PSo19UITextFieldDelegate", "clientPort"]
@@ -835,6 +853,7 @@ depends-member:
 - !private ["PSo18UITraitEnvironment", "addAction"]
 - ["PSo18UITraitEnvironment", "alert"]
 - ["PSo18UITraitEnvironment", "bind"]
+- ["PSo18UITraitEnvironment", "carIP"]
 - ["PSo18UITraitEnvironment", "client"]
 - ["PSo18UITraitEnvironment", "clientIP"]
 - ["PSo18UITraitEnvironment", "clientPort"]
@@ -884,6 +903,7 @@ depends-member:
 - !private ["CSo16UIViewController", "addAction"]
 - ["CSo16UIViewController", "alert"]
 - ["CSo16UIViewController", "bind"]
+- ["CSo16UIViewController", "carIP"]
 - ["CSo16UIViewController", "client"]
 - ["CSo16UIViewController", "clientIP"]
 - ["CSo16UIViewController", "clientPort"]
@@ -1048,4 +1068,4 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/i386/CoreGraphics.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/i386/UIKit.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/i386/CoreImage.swiftmodule"
-interface-hash: "c339a1ea070a0f8ceff290de76d0fa4b"
+interface-hash: "c1fa62dae84b0d960f2bb0eff10ffd56"

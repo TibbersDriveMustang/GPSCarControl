@@ -14,6 +14,8 @@ class TCPServerViewController: UIViewController {
     
     @IBOutlet weak var port: UITextField!
     
+    @IBOutlet weak var carIP: UILabel!
+    
     @IBOutlet weak var sendedMsg: UITextField!
     
     @IBOutlet weak var receivedMsg: UILabel!
@@ -26,6 +28,7 @@ class TCPServerViewController: UIViewController {
     
     var clientPort: Int!
     
+    
     override func viewDidLoad() {
         let ipUtil = IPAddress()
         
@@ -35,7 +38,7 @@ class TCPServerViewController: UIViewController {
         self.port.delegate = self
         self.sendedMsg.delegate = self
         
-        
+        self.carIP.text = self.clientIP
 
 
     }
@@ -82,7 +85,14 @@ extension TCPServerViewController: TCPServerDelegate {
         
         dispatch_async(dispatch_get_main_queue()) { [weak self] in
             self?.alert("Alert", msg: "connected client addr: \(client.addr)")
+            self?.carIP.text = "\(client.addr)"   
         }
+        
+        // Show CarIP on the mainboard
+        //self.carIP.text = client.addr as String
+        //self.carIP.text = "HEHE"
+
+        
     }
     
     func server(server: TCPServer, client: TCPClient, receivedData data: NSData) {
@@ -90,6 +100,10 @@ extension TCPServerViewController: TCPServerDelegate {
         if let msg = NSString(data: data, encoding: NSUTF8StringEncoding) {
             dispatch_async(dispatch_get_main_queue()) { [weak self] in
                 self?.receivedMsg.text = "\(client.addr):\(msg)"
+                
+           // dispatch_async(dispatch_get_main_queue()) { [weak self] in
+            //    self?.carIP.text = "\(client.addr)"
+            
                 print(msg)
                 print("client port is:")
                 print(client.port)

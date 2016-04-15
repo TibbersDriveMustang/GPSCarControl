@@ -141,6 +141,7 @@ SWIFT_CLASS("_TtC6socket23TCPServerViewController")
 @interface TCPServerViewController : UIViewController
 @property (nonatomic, weak) IBOutlet UILabel * __null_unspecified localIP;
 @property (nonatomic, weak) IBOutlet UITextField * __null_unspecified port;
+@property (nonatomic, weak) IBOutlet UILabel * __null_unspecified carIP;
 @property (nonatomic, weak) IBOutlet UITextField * __null_unspecified sendedMsg;
 @property (nonatomic, weak) IBOutlet UILabel * __null_unspecified receivedMsg;
 @property (nonatomic, copy) NSString * __null_unspecified clientIP;
