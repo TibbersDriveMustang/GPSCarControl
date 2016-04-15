@@ -42,7 +42,8 @@ class TCPServerViewController: UIViewController {
 
 
     }
-    
+
+    /*        Bind Server to local IP and local Port                      */
     @IBAction func bind(sender: UIButton) {
         
         if self.server != nil {
@@ -56,8 +57,11 @@ class TCPServerViewController: UIViewController {
         
     }
     
+    /**********************************************************************/
+    
     @IBAction func sendMsg(sender: AnyObject) {
         if let sv = self.server {
+            //for client in self.clients
             sv.send(self.sendedMsg.text!)
         }
     }
@@ -75,6 +79,7 @@ class TCPServerViewController: UIViewController {
 extension TCPServerViewController: TCPServerDelegate {
     
     func server(server: TCPServer, serverIsWorking isWorking: Bool) {
+        
         print(isWorking)
         
         alert("Alert", msg: "server is work: \(isWorking)")
@@ -83,14 +88,16 @@ extension TCPServerViewController: TCPServerDelegate {
     func server(server: TCPServer, connectedClient client: TCPClient) {
         print(client.addr)
         
+        /*     Get following instructions run on main thread     */
+        
         dispatch_async(dispatch_get_main_queue()) { [weak self] in
             self?.alert("Alert", msg: "connected client addr: \(client.addr)")
-            self?.carIP.text = "\(client.addr)"   
+
+            // Show CarIP on the mainboard
+            self?.carIP.text = "\(client.addr)"
         }
         
-        // Show CarIP on the mainboard
-        //self.carIP.text = client.addr as String
-        //self.carIP.text = "HEHE"
+        /*********************************************************/
 
         
     }
@@ -101,12 +108,15 @@ extension TCPServerViewController: TCPServerDelegate {
             dispatch_async(dispatch_get_main_queue()) { [weak self] in
                 self?.receivedMsg.text = "\(client.addr):\(msg)"
                 
-           // dispatch_async(dispatch_get_main_queue()) { [weak self] in
-            //    self?.carIP.text = "\(client.addr)"
-            
                 print(msg)
                 print("client port is:")
                 print(client.port)
+                
+                self?.server.clients.append(client) //record car_client into server
+                self!.alert("Alert", msg: "car(client) info recorded")
+                
+                
+                /* Under construction:    setup connection to send data back to car*/
                 if msg == "setPeerToPeer" {
                     self!.alert("Alert", msg: "Setting up peer to peer")
                     
@@ -123,12 +133,11 @@ extension TCPServerViewController: TCPServerDelegate {
                     // To be continue
                     
                     //
-                    
-                    
-                }
-                else{
+                }else{
+                
                     self!.alert("Alert", msg: msg as String)
                 }
+                /*******************************************************************/
                 
             }
         }

@@ -6,47 +6,47 @@ provides-nominal:
 provides-member:
 - ["C6socket23TCPServerViewController", ""]
 provides-dynamic-lookup:
-- "sendMsg"
-- "localIP"
-- "bind"
-- "receivedMsg"
-- "alert"
-- "carIP"
-- "textFieldShouldReturn"
 - "port"
+- "alert"
 - "clientIP"
-- "sendedMsg"
 - "viewDidLoad"
+- "sendedMsg"
+- "textFieldShouldReturn"
+- "bind"
+- "localIP"
+- "sendMsg"
+- "receivedMsg"
+- "carIP"
 depends-top-level:
-- !private "UIAlertController"
-- "TCPServer"
-- !private "print"
 - !private "UIAlertActionStyle"
-- "UILabel"
+- "UIViewController"
 - "NSData"
+- !private "!="
+- !private "dispatch_async"
+- !private "NSUTF8StringEncoding"
+- "Bool"
+- !private "UIAlertController"
+- "UnicodeScalarType"
+- "TCPServerViewController"
+- !private "StringLiteralType"
+- "TCPServerDelegate"
+- !private "dispatch_get_main_queue"
+- !private "=="
+- "AnyObject"
+- !private "UIAlertAction"
+- !private "BooleanLiteralType"
+- !private "NSString"
+- !private "print"
+- "TCPClient"
+- "UIButton"
+- "TCPServer"
+- "UILabel"
+- "UITextFieldDelegate"
 - "String"
 - "Int"
-- !private "NSString"
-- "TCPClient"
-- "UITextFieldDelegate"
-- "UnicodeScalarType"
-- "UIViewController"
-- "Bool"
-- "UIButton"
-- !private "BooleanLiteralType"
-- !private "IPAddress"
-- !private "UIAlertAction"
-- "TCPServerDelegate"
-- !private "=="
-- "TCPServerViewController"
-- !private "NSUTF8StringEncoding"
-- !private "dispatch_get_main_queue"
-- "UITextField"
-- !private "StringLiteralType"
-- !private "dispatch_async"
-- !private "!="
 - !private "UIAlertControllerStyle"
-- "AnyObject"
+- "UITextField"
+- !private "IPAddress"
 depends-member:
 - !private ["PSs9AnyObject", "IPAddress"]
 - !private ["PSs9AnyObject", "Int"]
@@ -66,6 +66,7 @@ depends-member:
 - ["PSs9AnyObject", "client"]
 - ["PSs9AnyObject", "clientIP"]
 - ["PSs9AnyObject", "clientPort"]
+- !private ["PSs9AnyObject", "clients"]
 - !private ["PSs9AnyObject", "close"]
 - !private ["PSs9AnyObject", "connectServer"]
 - !private ["PSs9AnyObject", "delegate"]
@@ -94,14 +95,32 @@ depends-member:
 - ["PSs9AnyObject", "textFieldShouldReturn"]
 - ["PSs9AnyObject", "viewDidLoad"]
 - ["PSs9AnyObject", ""]
+- !private ["Sa", "Generator"]
+- !private ["Sa", "Index"]
+- !private ["Sa", "SubSequence"]
+- !private ["Sa", "_Element"]
+- !private ["Sa", "append"]
+- !private ["PSs23ArrayLiteralConvertible", "Generator"]
+- !private ["PSs23ArrayLiteralConvertible", "Index"]
+- !private ["PSs23ArrayLiteralConvertible", "SubSequence"]
+- !private ["PSs23ArrayLiteralConvertible", "_Element"]
+- !private ["PSs23ArrayLiteralConvertible", "append"]
+- !private ["VSs10ArraySlice", "Generator"]
+- !private ["VSs10ArraySlice", "Index"]
+- !private ["PSs22BidirectionalIndexType", "Distance"]
+- !private ["PSs22BidirectionalIndexType", "IntegerLiteralType"]
 - !private ["PSs22BidirectionalIndexType", "init"]
+- !private ["PSs21BitwiseOperationsType", "Distance"]
+- !private ["PSs21BitwiseOperationsType", "IntegerLiteralType"]
 - !private ["PSs21BitwiseOperationsType", "init"]
 - !private ["Sb", "_getBuiltinLogicValue"]
 - !private ["Sb", "deinit"]
 - !private ["PSs25BooleanLiteralConvertible", "_getBuiltinLogicValue"]
 - !private ["PSs11BooleanType", "_getBuiltinLogicValue"]
+- !private ["PSs11CVarArgType", "Distance"]
 - !private ["PSs11CVarArgType", "IPAddress"]
 - !private ["PSs11CVarArgType", "Int"]
+- !private ["PSs11CVarArgType", "IntegerLiteralType"]
 - !private ["PSs11CVarArgType", "NSString"]
 - !private ["PSs11CVarArgType", "NSUTF8StringEncoding"]
 - !private ["PSs11CVarArgType", "TCPClient"]
@@ -142,23 +161,42 @@ depends-member:
 - ["PSs11CVarArgType", "viewDidLoad"]
 - ["PSs11CVarArgType", ""]
 - !private ["VSs9Character", "deinit"]
+- !private ["PSs14CollectionType", "Generator"]
+- !private ["PSs14CollectionType", "Index"]
+- !private ["PSs14CollectionType", "SubSequence"]
+- !private ["PSs14CollectionType", "_Element"]
+- !private ["PSs14CollectionType", "append"]
+- !private ["PSs10Comparable", "Distance"]
+- !private ["PSs10Comparable", "IntegerLiteralType"]
 - !private ["PSs10Comparable", "init"]
+- !private ["PSs28CustomDebugStringConvertible", "Generator"]
+- !private ["PSs28CustomDebugStringConvertible", "Index"]
 - ["PSs28CustomDebugStringConvertible", "Some"]
+- !private ["PSs28CustomDebugStringConvertible", "SubSequence"]
+- !private ["PSs28CustomDebugStringConvertible", "_Element"]
+- !private ["PSs28CustomDebugStringConvertible", "append"]
 - !private ["PSs28CustomDebugStringConvertible", "init"]
+- !private ["PSs23CustomStringConvertible", "Distance"]
+- !private ["PSs23CustomStringConvertible", "Generator"]
 - !private ["PSs23CustomStringConvertible", "IPAddress"]
+- !private ["PSs23CustomStringConvertible", "Index"]
 - !private ["PSs23CustomStringConvertible", "Int"]
+- !private ["PSs23CustomStringConvertible", "IntegerLiteralType"]
 - !private ["PSs23CustomStringConvertible", "NSString"]
 - !private ["PSs23CustomStringConvertible", "NSUTF8StringEncoding"]
 - ["PSs23CustomStringConvertible", "Some"]
+- !private ["PSs23CustomStringConvertible", "SubSequence"]
 - !private ["PSs23CustomStringConvertible", "TCPClient"]
 - !private ["PSs23CustomStringConvertible", "TCPServer"]
 - !private ["PSs23CustomStringConvertible", "UIAlertAction"]
 - !private ["PSs23CustomStringConvertible", "UIAlertActionStyle"]
 - !private ["PSs23CustomStringConvertible", "UIAlertController"]
 - !private ["PSs23CustomStringConvertible", "UIAlertControllerStyle"]
+- !private ["PSs23CustomStringConvertible", "_Element"]
 - !private ["PSs23CustomStringConvertible", "_getBuiltinLogicValue"]
 - !private ["PSs23CustomStringConvertible", "addAction"]
 - ["PSs23CustomStringConvertible", "alert"]
+- !private ["PSs23CustomStringConvertible", "append"]
 - ["PSs23CustomStringConvertible", "bind"]
 - ["PSs23CustomStringConvertible", "carIP"]
 - ["PSs23CustomStringConvertible", "client"]
@@ -191,8 +229,10 @@ depends-member:
 - !private ["Sd", "deinit"]
 - !private ["PSs9Equatable", "Alert"]
 - !private ["PSs9Equatable", "Default"]
+- !private ["PSs9Equatable", "Distance"]
 - !private ["PSs9Equatable", "IPAddress"]
 - !private ["PSs9Equatable", "Int"]
+- !private ["PSs9Equatable", "IntegerLiteralType"]
 - !private ["PSs9Equatable", "NSString"]
 - !private ["PSs9Equatable", "NSUTF8StringEncoding"]
 - !private ["PSs9Equatable", "TCPClient"]
@@ -235,11 +275,16 @@ depends-member:
 - ["PSs9Equatable", ""]
 - !private ["PSs41ExtendedGraphemeClusterLiteralConvertible", "init"]
 - !private ["Sf", "deinit"]
+- !private ["PSs16ForwardIndexType", "Distance"]
+- !private ["PSs16ForwardIndexType", "IntegerLiteralType"]
 - !private ["PSs16ForwardIndexType", "init"]
+- !private ["PSs13GeneratorType", "Element"]
 - !private ["PSs8Hashable", "Alert"]
 - !private ["PSs8Hashable", "Default"]
+- !private ["PSs8Hashable", "Distance"]
 - !private ["PSs8Hashable", "IPAddress"]
 - !private ["PSs8Hashable", "Int"]
+- !private ["PSs8Hashable", "IntegerLiteralType"]
 - !private ["PSs8Hashable", "NSString"]
 - !private ["PSs8Hashable", "NSUTF8StringEncoding"]
 - !private ["PSs8Hashable", "TCPClient"]
@@ -284,16 +329,47 @@ depends-member:
 - !private ["CSo9IPAddress", "init"]
 - ["SQ", "Some"]
 - !private ["SQ", "deinit"]
+- !private ["PSs9Indexable", "Generator"]
+- !private ["PSs9Indexable", "Index"]
+- !private ["PSs9Indexable", "SubSequence"]
+- !private ["PSs9Indexable", "_Element"]
+- !private ["PSs9Indexable", "append"]
+- !private ["VSs17IndexingGenerator", "Element"]
+- !private ["Si", "Distance"]
+- !private ["Si", "IntegerLiteralType"]
 - !private ["Si", "deinit"]
 - !private ["Si", "init"]
 - !private ["VSs5Int16", "deinit"]
 - !private ["VSs5Int32", "deinit"]
 - !private ["VSs5Int64", "deinit"]
 - !private ["VSs4Int8", "deinit"]
+- !private ["PSs21IntegerArithmeticType", "Distance"]
+- !private ["PSs21IntegerArithmeticType", "IntegerLiteralType"]
 - !private ["PSs21IntegerArithmeticType", "init"]
+- !private ["PSs25IntegerLiteralConvertible", "Distance"]
+- !private ["PSs25IntegerLiteralConvertible", "IntegerLiteralType"]
 - !private ["PSs25IntegerLiteralConvertible", "init"]
+- !private ["PSs11IntegerType", "Distance"]
+- !private ["PSs11IntegerType", "IntegerLiteralType"]
 - !private ["PSs11IntegerType", "init"]
+- !private ["PSs14MirrorPathType", "Distance"]
+- !private ["PSs14MirrorPathType", "IntegerLiteralType"]
 - !private ["PSs14MirrorPathType", "init"]
+- !private ["PSs21MutableCollectionType", "Generator"]
+- !private ["PSs21MutableCollectionType", "Index"]
+- !private ["PSs21MutableCollectionType", "SubSequence"]
+- !private ["PSs21MutableCollectionType", "_Element"]
+- !private ["PSs21MutableCollectionType", "append"]
+- !private ["PSs16MutableIndexable", "Generator"]
+- !private ["PSs16MutableIndexable", "Index"]
+- !private ["PSs16MutableIndexable", "SubSequence"]
+- !private ["PSs16MutableIndexable", "_Element"]
+- !private ["PSs16MutableIndexable", "append"]
+- !private ["PSs16MutableSliceable", "Generator"]
+- !private ["PSs16MutableSliceable", "Index"]
+- !private ["PSs16MutableSliceable", "SubSequence"]
+- !private ["PSs16MutableSliceable", "_Element"]
+- !private ["PSs16MutableSliceable", "append"]
 - !private ["PSo8NSCoding", "IPAddress"]
 - !private ["PSo8NSCoding", "Int"]
 - !private ["PSo8NSCoding", "NSString"]
@@ -469,12 +545,30 @@ depends-member:
 - ["Sq", "Some"]
 - !private ["Sq", "deinit"]
 - !private ["PSs16OutputStreamType", "init"]
+- !private ["PSs21RandomAccessIndexType", "Distance"]
+- !private ["PSs21RandomAccessIndexType", "IntegerLiteralType"]
 - !private ["PSs21RandomAccessIndexType", "init"]
+- !private ["PSs30RangeReplaceableCollectionType", "Generator"]
+- !private ["PSs30RangeReplaceableCollectionType", "Index"]
+- !private ["PSs30RangeReplaceableCollectionType", "SubSequence"]
+- !private ["PSs30RangeReplaceableCollectionType", "_Element"]
+- !private ["PSs30RangeReplaceableCollectionType", "append"]
 - !private ["PSs16RawRepresentable", "Alert"]
 - !private ["PSs16RawRepresentable", "Default"]
+- !private ["PSs12SequenceType", "Element"]
+- !private ["PSs12SequenceType", "Generator"]
+- !private ["PSs12SequenceType", "Index"]
+- !private ["PSs12SequenceType", "SubSequence"]
+- !private ["PSs12SequenceType", "_Element"]
+- !private ["PSs12SequenceType", "append"]
+- !private ["PSs17SignedIntegerType", "Distance"]
+- !private ["PSs17SignedIntegerType", "IntegerLiteralType"]
 - !private ["PSs17SignedIntegerType", "init"]
+- !private ["PSs16SignedNumberType", "Distance"]
+- !private ["PSs16SignedNumberType", "IntegerLiteralType"]
 - !private ["PSs16SignedNumberType", "init"]
 - !private ["C6socket6Socket", "addr"]
+- !private ["C6socket6Socket", "clients"]
 - !private ["C6socket6Socket", "close"]
 - !private ["C6socket6Socket", "connectServer"]
 - !private ["C6socket6Socket", "deinit"]
@@ -484,6 +578,8 @@ depends-member:
 - !private ["C6socket6Socket", "send"]
 - !private ["C6socket6Socket", "start"]
 - !private ["PSs10Streamable", "init"]
+- !private ["PSs10Strideable", "Distance"]
+- !private ["PSs10Strideable", "IntegerLiteralType"]
 - !private ["PSs10Strideable", "init"]
 - !private ["SS", "init"]
 - !private ["PSs30StringInterpolationConvertible", "init"]
@@ -494,6 +590,7 @@ depends-member:
 - !private ["C6socket9TCPClient", "deinit"]
 - !private ["C6socket9TCPClient", "init"]
 - !private ["C6socket9TCPClient", "port"]
+- !private ["C6socket9TCPServer", "clients"]
 - !private ["C6socket9TCPServer", "close"]
 - !private ["C6socket9TCPServer", "deinit"]
 - !private ["C6socket9TCPServer", "delegate"]
@@ -934,30 +1031,71 @@ depends-member:
 - !private ["VSs5UInt8", "deinit"]
 - !private ["Sc", "deinit"]
 - !private ["PSs31UnicodeScalarLiteralConvertible", "init"]
+- !private ["PSs10_ArrayType", "Generator"]
+- !private ["PSs10_ArrayType", "Index"]
+- !private ["PSs10_ArrayType", "SubSequence"]
+- !private ["PSs10_ArrayType", "_Element"]
+- !private ["PSs10_ArrayType", "append"]
 - !private ["PSs33_BuiltinBooleanLiteralConvertible", "_getBuiltinLogicValue"]
 - !private ["PSs49_BuiltinExtendedGraphemeClusterLiteralConvertible", "init"]
+- !private ["PSs33_BuiltinIntegerLiteralConvertible", "Distance"]
+- !private ["PSs33_BuiltinIntegerLiteralConvertible", "IntegerLiteralType"]
 - !private ["PSs33_BuiltinIntegerLiteralConvertible", "init"]
 - !private ["PSs32_BuiltinStringLiteralConvertible", "init"]
 - !private ["PSs37_BuiltinUTF16StringLiteralConvertible", "init"]
 - !private ["PSs39_BuiltinUnicodeScalarLiteralConvertible", "init"]
 - !private ["PSs16_CocoaStringType", "init"]
+- !private ["PSs24_DestructorSafeContainer", "Generator"]
+- !private ["PSs24_DestructorSafeContainer", "Index"]
+- !private ["PSs24_DestructorSafeContainer", "SubSequence"]
+- !private ["PSs24_DestructorSafeContainer", "_Element"]
+- !private ["PSs24_DestructorSafeContainer", "append"]
+- !private ["PSs14_Incrementable", "Distance"]
+- !private ["PSs14_Incrementable", "IntegerLiteralType"]
 - !private ["PSs14_Incrementable", "init"]
+- !private ["PSs22_IntegerArithmeticType", "Distance"]
+- !private ["PSs22_IntegerArithmeticType", "IntegerLiteralType"]
 - !private ["PSs22_IntegerArithmeticType", "init"]
+- !private ["PSs12_IntegerType", "Distance"]
+- !private ["PSs12_IntegerType", "IntegerLiteralType"]
 - !private ["PSs12_IntegerType", "init"]
+- !private ["PSs21_ObjectiveCBridgeable", "Distance"]
+- !private ["PSs21_ObjectiveCBridgeable", "Generator"]
+- !private ["PSs21_ObjectiveCBridgeable", "Index"]
+- !private ["PSs21_ObjectiveCBridgeable", "IntegerLiteralType"]
 - ["PSs21_ObjectiveCBridgeable", "Some"]
+- !private ["PSs21_ObjectiveCBridgeable", "SubSequence"]
+- !private ["PSs21_ObjectiveCBridgeable", "_Element"]
 - !private ["PSs21_ObjectiveCBridgeable", "_getBuiltinLogicValue"]
+- !private ["PSs21_ObjectiveCBridgeable", "append"]
 - !private ["PSs21_ObjectiveCBridgeable", "init"]
+- !private ["PSs22_RandomAccessAmbiguity", "Distance"]
+- !private ["PSs22_RandomAccessAmbiguity", "IntegerLiteralType"]
 - !private ["PSs22_RandomAccessAmbiguity", "init"]
+- !private ["PSs12_Reflectable", "Distance"]
+- !private ["PSs12_Reflectable", "Generator"]
+- !private ["PSs12_Reflectable", "Index"]
+- !private ["PSs12_Reflectable", "IntegerLiteralType"]
 - ["PSs12_Reflectable", "Some"]
+- !private ["PSs12_Reflectable", "SubSequence"]
+- !private ["PSs12_Reflectable", "_Element"]
 - !private ["PSs12_Reflectable", "_getBuiltinLogicValue"]
+- !private ["PSs12_Reflectable", "append"]
 - !private ["PSs12_Reflectable", "delegate"]
 - !private ["PSs12_Reflectable", "init"]
 - !private ["PSs12_Reflectable", "resignFirstResponder"]
 - !private ["PSs12_Reflectable", "text"]
+- !private ["PSs18_SignedIntegerType", "Distance"]
+- !private ["PSs18_SignedIntegerType", "IntegerLiteralType"]
 - !private ["PSs18_SignedIntegerType", "init"]
+- !private ["PSs11_Strideable", "Distance"]
+- !private ["PSs11_Strideable", "IntegerLiteralType"]
 - !private ["PSs11_Strideable", "init"]
 depends-nominal:
 - "PSs9AnyObject"
+- !private "Sa"
+- !private "PSs23ArrayLiteralConvertible"
+- !private "VSs10ArraySlice"
 - !private "PSs22BidirectionalIndexType"
 - !private "PSs21BitwiseOperationsType"
 - !private "Sb"
@@ -965,6 +1103,7 @@ depends-nominal:
 - !private "PSs11BooleanType"
 - "PSs11CVarArgType"
 - !private "VSs9Character"
+- !private "PSs14CollectionType"
 - !private "PSs10Comparable"
 - "PSs28CustomDebugStringConvertible"
 - "PSs23CustomStringConvertible"
@@ -973,9 +1112,12 @@ depends-nominal:
 - !private "PSs41ExtendedGraphemeClusterLiteralConvertible"
 - !private "Sf"
 - !private "PSs16ForwardIndexType"
+- !private "PSs13GeneratorType"
 - "PSs8Hashable"
 - !private "CSo9IPAddress"
 - "SQ"
+- !private "PSs9Indexable"
+- !private "VSs17IndexingGenerator"
 - !private "Si"
 - !private "VSs5Int16"
 - !private "VSs5Int32"
@@ -985,6 +1127,9 @@ depends-nominal:
 - !private "PSs25IntegerLiteralConvertible"
 - !private "PSs11IntegerType"
 - !private "PSs14MirrorPathType"
+- !private "PSs21MutableCollectionType"
+- !private "PSs16MutableIndexable"
+- !private "PSs16MutableSliceable"
 - "PSo8NSCoding"
 - !private "PSo9NSCopying"
 - "PSo26NSExtensionRequestHandling"
@@ -997,7 +1142,9 @@ depends-nominal:
 - "Sq"
 - !private "PSs16OutputStreamType"
 - !private "PSs21RandomAccessIndexType"
+- !private "PSs30RangeReplaceableCollectionType"
 - !private "PSs16RawRepresentable"
+- !private "PSs12SequenceType"
 - !private "PSs17SignedIntegerType"
 - !private "PSs16SignedNumberType"
 - !private "C6socket6Socket"
@@ -1040,6 +1187,7 @@ depends-nominal:
 - !private "VSs5UInt8"
 - !private "Sc"
 - !private "PSs31UnicodeScalarLiteralConvertible"
+- !private "PSs10_ArrayType"
 - !private "PSs33_BuiltinBooleanLiteralConvertible"
 - !private "PSs49_BuiltinExtendedGraphemeClusterLiteralConvertible"
 - !private "PSs33_BuiltinIntegerLiteralConvertible"
@@ -1047,6 +1195,7 @@ depends-nominal:
 - !private "PSs37_BuiltinUTF16StringLiteralConvertible"
 - !private "PSs39_BuiltinUnicodeScalarLiteralConvertible"
 - !private "PSs16_CocoaStringType"
+- !private "PSs24_DestructorSafeContainer"
 - !private "PSs14_Incrementable"
 - !private "PSs22_IntegerArithmeticType"
 - !private "PSs12_IntegerType"

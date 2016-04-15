@@ -147,6 +147,8 @@ SWIFT_CLASS("_TtC6socket23TCPServerViewController")
 @property (nonatomic, copy) NSString * __null_unspecified clientIP;
 - (void)viewDidLoad;
 - (IBAction)bind:(UIButton * __nonnull)sender;
+
+/// <hr/>
 - (IBAction)sendMsg:(id __nonnull)sender;
 - (void)alert:(NSString * __nonnull)title msg:(NSString * __nonnull)msg;
 - (nonnull instancetype)initWithNibName:(NSString * __nullable)nibNameOrNil bundle:(NSBundle * __nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
