@@ -6,46 +6,46 @@ provides-nominal:
 provides-member:
 - ["C6socket23TCPServerViewController", ""]
 provides-dynamic-lookup:
+- "viewDidLoad"
+- "port"
 - "receivedMsg"
 - "bind"
 - "alert"
-- "sendMsg"
-- "port"
-- "sendedMsg"
 - "textFieldShouldReturn"
-- "localIP"
-- "viewDidLoad"
+- "sendedMsg"
+- "sendMsg"
 - "clientIP"
+- "localIP"
 depends-top-level:
-- "TCPClient"
+- !private "StringLiteralType"
+- "UIButton"
 - !private "IPAddress"
-- "UIViewController"
-- !private "!="
-- !private "dispatch_async"
-- "TCPServer"
-- !private "=="
-- "Bool"
 - !private "UIAlertAction"
-- !private "UIAlertController"
+- !private "NSString"
+- "TCPServerDelegate"
+- !private "dispatch_get_main_queue"
+- "String"
+- "UITextField"
+- "Int"
+- "TCPServerViewController"
 - "AnyObject"
 - !private "UIAlertActionStyle"
-- !private "StringLiteralType"
-- !private "NSString"
-- "UnicodeScalarType"
-- "UILabel"
+- !private "!="
 - !private "NSUTF8StringEncoding"
-- "TCPServerViewController"
-- "UITextField"
-- "UITextFieldDelegate"
-- !private "dispatch_get_main_queue"
+- !private "=="
 - !private "UIAlertControllerStyle"
-- "UIButton"
-- "TCPServerDelegate"
-- !private "print"
-- "String"
-- "NSData"
-- "Int"
+- "TCPClient"
+- !private "UIAlertController"
+- "UILabel"
+- !private "dispatch_async"
+- "Bool"
+- "UnicodeScalarType"
+- "TCPServer"
 - !private "BooleanLiteralType"
+- "NSData"
+- "UITextFieldDelegate"
+- !private "print"
+- "UIViewController"
 depends-member:
 - !private ["PSs9AnyObject", "IPAddress"]
 - !private ["PSs9AnyObject", "Int"]
@@ -453,6 +453,7 @@ depends-member:
 - ["PSo16NSObjectProtocol", "viewDidLoad"]
 - ["PSo16NSObjectProtocol", ""]
 - !private ["PSo14NSSecureCoding", "init"]
+- !private ["CSo8NSString", "deinit"]
 - !private ["CSo8NSString", "init"]
 - ["PSs21NilLiteralConvertible", "Some"]
 - ["Sq", "Some"]

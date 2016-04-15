@@ -3,7 +3,7 @@
 //  socket
 //
 //  Created by  lifirewolf on 15/8/22.
-//  Copyright (c) 2015年  lifirewolf. All rights reserved.
+//  Copyright (c) 2016 Hongyi Guo. All rights reserved.
 //
 
 import Foundation

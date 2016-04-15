@@ -58,6 +58,8 @@ class TCPServerViewController: UIViewController {
             sv.send(self.sendedMsg.text!)
         }
     }
+    
+    
 
     func alert(title: String, msg: String) {
         let alert = UIAlertController(title: title, message: msg, preferredStyle: UIAlertControllerStyle.Alert)
@@ -100,14 +102,20 @@ extension TCPServerViewController: TCPServerDelegate {
                     self?.clientIP = client.addr
                     self?.clientPort = client.port
                     
-                    self!.client = TCPClient(addr: self!.clientIP, port: self!.clientPort)
+                    //self!.client = TCPClient(addr: self!.clientIP, port: self!.clientPort)
+                    self!.client = TCPClient(addr: self!.clientIP, port: 17642)
                     self?.client.connectServer(timeout: 10)
                     
                     // To be continue
                     
+                    //
                     
                     
                 }
+                else{
+                    self!.alert("Alert", msg: msg as String)
+                }
+                
             }
         }
 

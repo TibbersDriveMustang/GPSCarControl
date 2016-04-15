@@ -3,7 +3,7 @@
 //  socket
 //
 //  Created by  lifirewolf on 15/8/21.
-//  Copyright (c) 2015年  lifirewolf. All rights reserved.
+//  Copyright (c) 2016 Hongyi Guo. All rights reserved.
 //
 
 #ifndef __socket__IPAddress__
