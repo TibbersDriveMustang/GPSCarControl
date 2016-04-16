@@ -21,6 +21,8 @@
 		5D94820F1B875EC900137E75 /* ytcpsocket.c in Sources */ = {isa = PBXBuildFile; fileRef = 5D94820A1B875EC900137E75 /* ytcpsocket.c */; };
 		70E8C80F1CB35103002136B4 /* app_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 70E8C80E1CB35103002136B4 /* app_icon.png */; };
 		70E8C8131CC1D777002136B4 /* CocoaAsyncSocket.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70E8C8121CC1D777002136B4 /* CocoaAsyncSocket.framework */; };
+		70E8C8141CC1DA14002136B4 /* CocoaAsyncSocket.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70E8C8121CC1D777002136B4 /* CocoaAsyncSocket.framework */; };
+		70E8C8151CC1DA14002136B4 /* CocoaAsyncSocket.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 70E8C8121CC1D777002136B4 /* CocoaAsyncSocket.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,6 +34,20 @@
 			remoteInfo = socket;
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		70E8C8161CC1DA14002136B4 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				70E8C8151CC1DA14002136B4 /* CocoaAsyncSocket.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		5D8BEE921B8822B8004D0A1D /* TCPServerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TCPServerViewController.swift; sourceTree = "<group>"; };
@@ -61,6 +77,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				70E8C8141CC1DA14002136B4 /* CocoaAsyncSocket.framework in Frameworks */,
 				70E8C8131CC1D777002136B4 /* CocoaAsyncSocket.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -159,6 +176,7 @@
 				5D9481D01B87088700137E75 /* Sources */,
 				5D9481D11B87088700137E75 /* Frameworks */,
 				5D9481D21B87088700137E75 /* Resources */,
+				70E8C8161CC1DA14002136B4 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
