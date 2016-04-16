@@ -136,6 +136,7 @@ SWIFT_CLASS("_TtC6socket23TCPClientViewController")
 @interface TCPClientViewController (SWIFT_EXTENSION(socket))
 @end
 
+@class GCDAsyncSocket;
 
 SWIFT_CLASS("_TtC6socket23TCPServerViewController")
 @interface TCPServerViewController : UIViewController
@@ -147,6 +148,7 @@ SWIFT_CLASS("_TtC6socket23TCPServerViewController")
 @property (nonatomic, weak) IBOutlet UITextField * __null_unspecified UDPLocalPort;
 @property (nonatomic, weak) IBOutlet UITextField * __null_unspecified UDPRemotePort;
 @property (nonatomic, weak) IBOutlet UITextField * __null_unspecified UDPMsgToSend;
+@property (nonatomic, strong) GCDAsyncSocket * __nullable _UDPsocket;
 @property (nonatomic, copy) NSString * __null_unspecified clientIP;
 - (void)viewDidLoad;
 - (IBAction)bind:(UIButton * __nonnull)sender;

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CocoaAsyncSocket
 
 class TCPServerViewController: UIViewController {
     
@@ -20,8 +21,8 @@ class TCPServerViewController: UIViewController {
     
     @IBOutlet weak var receivedMsg: UILabel!
     
-    /*                  For UDP                   */
     
+    /*                  For UDP                   */
     
     @IBOutlet weak var UDPLocalPort: UITextField!
     
@@ -29,6 +30,24 @@ class TCPServerViewController: UIViewController {
     
     @IBOutlet weak var UDPMsgToSend: UITextField!
     
+    var _UDPsocket: GCDAsyncSocket?
+    
+/*    var UDPsocket: GCDAsyncSocket?{
+        get {
+            if _UDPsocket == nil{
+                guard let UDPport = UInt16(UDPLocalPort.text ?? "0") where UDPport > 0 else{
+                    log(">>> Unable to initialize socket: local port unspecified.")
+                    return nil
+                }
+                let UDPSock = GCDAsyncSocket(delegate: self, delegateQueue: dispatch_get_main_queue()))
+                do{
+                    try UDPSock.bindToPort(UDPport)
+                }   //going to rebuild the framework
+            }
+        }
+    }
+*/
+    /**********************************************/
     
     var server: TCPServer!
     
@@ -49,7 +68,6 @@ class TCPServerViewController: UIViewController {
         self.sendedMsg.delegate = self
         
         self.carIP.text = self.clientIP
-
 
     }
 

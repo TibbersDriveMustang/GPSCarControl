@@ -6,23 +6,23 @@ provides-nominal:
 provides-member:
 - ["C6socket11AppDelegate", ""]
 provides-dynamic-lookup:
-- "applicationDidBecomeActive"
-- "applicationWillResignActive"
-- "applicationWillEnterForeground"
-- "applicationDidEnterBackground"
-- "application"
-- "applicationWillTerminate"
 - "window"
+- "applicationWillEnterForeground"
+- "application"
+- "applicationDidBecomeActive"
+- "applicationWillTerminate"
+- "applicationDidEnterBackground"
+- "applicationWillResignActive"
 depends-top-level:
-- !private "BooleanLiteralType"
-- "UIResponder"
-- "AnyObject"
-- "AppDelegate"
-- "UIApplication"
-- "Bool"
-- "UIWindow"
-- "NSObject"
 - "UIApplicationDelegate"
+- "NSObject"
+- "UIWindow"
+- "AnyObject"
+- "UIApplication"
+- "AppDelegate"
+- "UIResponder"
+- "Bool"
+- !private "BooleanLiteralType"
 depends-member:
 - ["PSs9AnyObject", "application"]
 - ["PSs9AnyObject", "applicationDidBecomeActive"]
@@ -211,4 +211,10 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/i386/CoreGraphics.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/i386/UIKit.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/i386/CoreImage.swiftmodule"
+- "/Users/Tibbers/Google Drive/2016Spring/RealTimeSystems/project/test/Socket-Implement/socket/Carthage/Build/iOS/CocoaAsyncSocket.framework/Headers/GCDAsyncUdpSocket.h"
+- "/Users/Tibbers/Google Drive/2016Spring/RealTimeSystems/project/test/Socket-Implement/socket/Carthage/Build/iOS/CocoaAsyncSocket.framework/Headers/GCDAsyncSocket.h"
+- "/Users/Tibbers/Google Drive/2016Spring/RealTimeSystems/project/test/Socket-Implement/socket/Carthage/Build/iOS/CocoaAsyncSocket.framework/Headers/AsyncUdpSocket.h"
+- "/Users/Tibbers/Google Drive/2016Spring/RealTimeSystems/project/test/Socket-Implement/socket/Carthage/Build/iOS/CocoaAsyncSocket.framework/Headers/AsyncSocket.h"
+- "/Users/Tibbers/Google Drive/2016Spring/RealTimeSystems/project/test/Socket-Implement/socket/Carthage/Build/iOS/CocoaAsyncSocket.framework/Headers/CocoaAsyncSocket.h"
+- "/Users/Tibbers/Google Drive/2016Spring/RealTimeSystems/project/test/Socket-Implement/socket/Carthage/Build/iOS/CocoaAsyncSocket.framework/Modules/module.modulemap"
 interface-hash: "eb6deb7e97b205db2b1f8c4c6c87743c"

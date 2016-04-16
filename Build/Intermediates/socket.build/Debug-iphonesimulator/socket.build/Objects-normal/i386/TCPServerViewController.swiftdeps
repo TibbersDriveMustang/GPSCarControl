@@ -7,49 +7,51 @@ provides-member:
 - ["C6socket23TCPServerViewController", ""]
 provides-dynamic-lookup:
 - "port"
-- "clientIP"
-- "textFieldShouldReturn"
-- "UDPMsgToSend"
-- "UDPLocalPort"
-- "receivedMsg"
-- "sendMsg"
-- "alert"
-- "viewDidLoad"
-- "localIP"
-- "bind"
-- "UDPRemotePort"
-- "sendedMsg"
 - "carIP"
+- "sendedMsg"
+- "UDPMsgToSend"
+- "bind"
+- "textFieldShouldReturn"
+- "viewDidLoad"
+- "receivedMsg"
+- "UDPRemotePort"
+- "clientIP"
+- "sendMsg"
+- "localIP"
+- "UDPLocalPort"
+- "alert"
+- "_UDPsocket"
 depends-top-level:
-- "AnyObject"
 - "TCPServerDelegate"
-- "TCPServerViewController"
-- "UIViewController"
-- !private "NSString"
-- !private "=="
-- !private "print"
-- !private "UIAlertController"
-- !private "UIAlertControllerStyle"
-- "String"
-- !private "IPAddress"
-- "NSData"
-- "Int"
-- !private "StringLiteralType"
-- "UITextFieldDelegate"
-- !private "dispatch_async"
 - !private "!="
-- "UITextField"
-- "TCPServer"
-- !private "dispatch_get_main_queue"
+- !private "dispatch_async"
 - "UIButton"
-- "TCPClient"
-- "Bool"
+- "UITextFieldDelegate"
+- "TCPServerViewController"
+- "NSData"
+- !private "dispatch_get_main_queue"
+- !private "=="
 - !private "NSUTF8StringEncoding"
+- "Bool"
+- !private "StringLiteralType"
 - "UnicodeScalarType"
-- !private "UIAlertActionStyle"
-- !private "UIAlertAction"
-- !private "BooleanLiteralType"
+- "UITextField"
+- !private "NSString"
+- !private "print"
+- !private "UIAlertControllerStyle"
+- "TCPServer"
+- "GCDAsyncSocket"
 - "UILabel"
+- !private "UIAlertController"
+- "AnyObject"
+- !private "UIAlertActionStyle"
+- !private "IPAddress"
+- "TCPClient"
+- !private "BooleanLiteralType"
+- "Int"
+- "UIViewController"
+- !private "UIAlertAction"
+- "String"
 depends-member:
 - !private ["PSs9AnyObject", "IPAddress"]
 - !private ["PSs9AnyObject", "Int"]
@@ -64,6 +66,7 @@ depends-member:
 - !private ["PSs9AnyObject", "UIAlertActionStyle"]
 - !private ["PSs9AnyObject", "UIAlertController"]
 - !private ["PSs9AnyObject", "UIAlertControllerStyle"]
+- ["PSs9AnyObject", "_UDPsocket"]
 - !private ["PSs9AnyObject", "addAction"]
 - !private ["PSs9AnyObject", "addr"]
 - ["PSs9AnyObject", "alert"]
@@ -138,6 +141,7 @@ depends-member:
 - !private ["PSs11CVarArgType", "UIAlertActionStyle"]
 - !private ["PSs11CVarArgType", "UIAlertController"]
 - !private ["PSs11CVarArgType", "UIAlertControllerStyle"]
+- ["PSs11CVarArgType", "_UDPsocket"]
 - !private ["PSs11CVarArgType", "addAction"]
 - ["PSs11CVarArgType", "alert"]
 - ["PSs11CVarArgType", "bind"]
@@ -205,6 +209,7 @@ depends-member:
 - !private ["PSs23CustomStringConvertible", "UIAlertController"]
 - !private ["PSs23CustomStringConvertible", "UIAlertControllerStyle"]
 - !private ["PSs23CustomStringConvertible", "_Element"]
+- ["PSs23CustomStringConvertible", "_UDPsocket"]
 - !private ["PSs23CustomStringConvertible", "_getBuiltinLogicValue"]
 - !private ["PSs23CustomStringConvertible", "addAction"]
 - ["PSs23CustomStringConvertible", "alert"]
@@ -256,6 +261,7 @@ depends-member:
 - !private ["PSs9Equatable", "UIAlertActionStyle"]
 - !private ["PSs9Equatable", "UIAlertController"]
 - !private ["PSs9Equatable", "UIAlertControllerStyle"]
+- ["PSs9Equatable", "_UDPsocket"]
 - !private ["PSs9Equatable", "_getBuiltinLogicValue"]
 - !private ["PSs9Equatable", "addAction"]
 - ["PSs9Equatable", "alert"]
@@ -311,6 +317,7 @@ depends-member:
 - !private ["PSs8Hashable", "UIAlertActionStyle"]
 - !private ["PSs8Hashable", "UIAlertController"]
 - !private ["PSs8Hashable", "UIAlertControllerStyle"]
+- ["PSs8Hashable", "_UDPsocket"]
 - !private ["PSs8Hashable", "_getBuiltinLogicValue"]
 - !private ["PSs8Hashable", "addAction"]
 - ["PSs8Hashable", "alert"]
@@ -401,6 +408,7 @@ depends-member:
 - !private ["PSo8NSCoding", "UIAlertActionStyle"]
 - !private ["PSo8NSCoding", "UIAlertController"]
 - !private ["PSo8NSCoding", "UIAlertControllerStyle"]
+- ["PSo8NSCoding", "_UDPsocket"]
 - !private ["PSo8NSCoding", "addAction"]
 - ["PSo8NSCoding", "alert"]
 - ["PSo8NSCoding", "bind"]
@@ -445,6 +453,7 @@ depends-member:
 - !private ["PSo26NSExtensionRequestHandling", "UIAlertActionStyle"]
 - !private ["PSo26NSExtensionRequestHandling", "UIAlertController"]
 - !private ["PSo26NSExtensionRequestHandling", "UIAlertControllerStyle"]
+- ["PSo26NSExtensionRequestHandling", "_UDPsocket"]
 - !private ["PSo26NSExtensionRequestHandling", "addAction"]
 - ["PSo26NSExtensionRequestHandling", "alert"]
 - ["PSo26NSExtensionRequestHandling", "bind"]
@@ -475,6 +484,7 @@ depends-member:
 - !private ["PSo16NSMutableCopying", "init"]
 - ["CSo8NSObject", "AnyObject"]
 - ["CSo8NSObject", "Bool"]
+- ["CSo8NSObject", "GCDAsyncSocket"]
 - !private ["CSo8NSObject", "IPAddress"]
 - ["CSo8NSObject", "Int"]
 - ["CSo8NSObject", "NSData"]
@@ -493,6 +503,7 @@ depends-member:
 - ["CSo8NSObject", "UIButton"]
 - ["CSo8NSObject", "UILabel"]
 - ["CSo8NSObject", "UITextField"]
+- ["CSo8NSObject", "_UDPsocket"]
 - !private ["CSo8NSObject", "addAction"]
 - ["CSo8NSObject", "alert"]
 - ["CSo8NSObject", "bind"]
@@ -537,6 +548,7 @@ depends-member:
 - !private ["PSo16NSObjectProtocol", "UIAlertActionStyle"]
 - !private ["PSo16NSObjectProtocol", "UIAlertController"]
 - !private ["PSo16NSObjectProtocol", "UIAlertControllerStyle"]
+- ["PSo16NSObjectProtocol", "_UDPsocket"]
 - !private ["PSo16NSObjectProtocol", "addAction"]
 - ["PSo16NSObjectProtocol", "alert"]
 - ["PSo16NSObjectProtocol", "bind"]
@@ -661,6 +673,7 @@ depends-member:
 - ["P6socket17TCPServerDelegate", ""]
 - ["C6socket23TCPServerViewController", "AnyObject"]
 - ["C6socket23TCPServerViewController", "Bool"]
+- ["C6socket23TCPServerViewController", "GCDAsyncSocket"]
 - !private ["C6socket23TCPServerViewController", "IPAddress"]
 - ["C6socket23TCPServerViewController", "Int"]
 - ["C6socket23TCPServerViewController", "NSData"]
@@ -679,6 +692,7 @@ depends-member:
 - ["C6socket23TCPServerViewController", "UIButton"]
 - ["C6socket23TCPServerViewController", "UILabel"]
 - ["C6socket23TCPServerViewController", "UITextField"]
+- ["C6socket23TCPServerViewController", "_UDPsocket"]
 - ["C6socket23TCPServerViewController", "alert"]
 - ["C6socket23TCPServerViewController", "bind"]
 - ["C6socket23TCPServerViewController", "carIP"]
@@ -729,6 +743,7 @@ depends-member:
 - !private ["PSo21UIAppearanceContainer", "UIAlertActionStyle"]
 - !private ["PSo21UIAppearanceContainer", "UIAlertController"]
 - !private ["PSo21UIAppearanceContainer", "UIAlertControllerStyle"]
+- ["PSo21UIAppearanceContainer", "_UDPsocket"]
 - !private ["PSo21UIAppearanceContainer", "addAction"]
 - ["PSo21UIAppearanceContainer", "alert"]
 - ["PSo21UIAppearanceContainer", "bind"]
@@ -772,6 +787,7 @@ depends-member:
 - !private ["PSo18UIContentContainer", "UIAlertActionStyle"]
 - !private ["PSo18UIContentContainer", "UIAlertController"]
 - !private ["PSo18UIContentContainer", "UIAlertControllerStyle"]
+- ["PSo18UIContentContainer", "_UDPsocket"]
 - !private ["PSo18UIContentContainer", "addAction"]
 - ["PSo18UIContentContainer", "alert"]
 - ["PSo18UIContentContainer", "bind"]
@@ -821,6 +837,7 @@ depends-member:
 - !private ["PSo18UIFocusEnvironment", "UIAlertActionStyle"]
 - !private ["PSo18UIFocusEnvironment", "UIAlertController"]
 - !private ["PSo18UIFocusEnvironment", "UIAlertControllerStyle"]
+- ["PSo18UIFocusEnvironment", "_UDPsocket"]
 - !private ["PSo18UIFocusEnvironment", "addAction"]
 - ["PSo18UIFocusEnvironment", "alert"]
 - ["PSo18UIFocusEnvironment", "bind"]
@@ -857,6 +874,7 @@ depends-member:
 - !private ["CSo7UILabel", "text"]
 - ["CSo11UIResponder", "AnyObject"]
 - ["CSo11UIResponder", "Bool"]
+- ["CSo11UIResponder", "GCDAsyncSocket"]
 - !private ["CSo11UIResponder", "IPAddress"]
 - ["CSo11UIResponder", "Int"]
 - ["CSo11UIResponder", "NSData"]
@@ -875,6 +893,7 @@ depends-member:
 - ["CSo11UIResponder", "UIButton"]
 - ["CSo11UIResponder", "UILabel"]
 - ["CSo11UIResponder", "UITextField"]
+- ["CSo11UIResponder", "_UDPsocket"]
 - !private ["CSo11UIResponder", "addAction"]
 - ["CSo11UIResponder", "alert"]
 - ["CSo11UIResponder", "bind"]
@@ -917,6 +936,7 @@ depends-member:
 - !private ["PSo16UIStateRestoring", "UIAlertActionStyle"]
 - !private ["PSo16UIStateRestoring", "UIAlertController"]
 - !private ["PSo16UIStateRestoring", "UIAlertControllerStyle"]
+- ["PSo16UIStateRestoring", "_UDPsocket"]
 - !private ["PSo16UIStateRestoring", "addAction"]
 - ["PSo16UIStateRestoring", "alert"]
 - ["PSo16UIStateRestoring", "bind"]
@@ -998,6 +1018,7 @@ depends-member:
 - !private ["PSo18UITraitEnvironment", "UIAlertActionStyle"]
 - !private ["PSo18UITraitEnvironment", "UIAlertController"]
 - !private ["PSo18UITraitEnvironment", "UIAlertControllerStyle"]
+- ["PSo18UITraitEnvironment", "_UDPsocket"]
 - !private ["PSo18UITraitEnvironment", "addAction"]
 - ["PSo18UITraitEnvironment", "alert"]
 - ["PSo18UITraitEnvironment", "bind"]
@@ -1033,6 +1054,7 @@ depends-member:
 - !private ["CSo6UIView", "text"]
 - ["CSo16UIViewController", "AnyObject"]
 - ["CSo16UIViewController", "Bool"]
+- ["CSo16UIViewController", "GCDAsyncSocket"]
 - !private ["CSo16UIViewController", "IPAddress"]
 - ["CSo16UIViewController", "Int"]
 - ["CSo16UIViewController", "NSData"]
@@ -1051,6 +1073,7 @@ depends-member:
 - ["CSo16UIViewController", "UIButton"]
 - ["CSo16UIViewController", "UILabel"]
 - ["CSo16UIViewController", "UITextField"]
+- ["CSo16UIViewController", "_UDPsocket"]
 - !private ["CSo16UIViewController", "addAction"]
 - ["CSo16UIViewController", "alert"]
 - ["CSo16UIViewController", "bind"]
@@ -1271,4 +1294,10 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/i386/CoreGraphics.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/i386/UIKit.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/i386/CoreImage.swiftmodule"
-interface-hash: "3b205b243a7ad63387115500deee0707"
+- "/Users/Tibbers/Google Drive/2016Spring/RealTimeSystems/project/test/Socket-Implement/socket/Carthage/Build/iOS/CocoaAsyncSocket.framework/Headers/GCDAsyncUdpSocket.h"
+- "/Users/Tibbers/Google Drive/2016Spring/RealTimeSystems/project/test/Socket-Implement/socket/Carthage/Build/iOS/CocoaAsyncSocket.framework/Headers/GCDAsyncSocket.h"
+- "/Users/Tibbers/Google Drive/2016Spring/RealTimeSystems/project/test/Socket-Implement/socket/Carthage/Build/iOS/CocoaAsyncSocket.framework/Headers/AsyncUdpSocket.h"
+- "/Users/Tibbers/Google Drive/2016Spring/RealTimeSystems/project/test/Socket-Implement/socket/Carthage/Build/iOS/CocoaAsyncSocket.framework/Headers/AsyncSocket.h"
+- "/Users/Tibbers/Google Drive/2016Spring/RealTimeSystems/project/test/Socket-Implement/socket/Carthage/Build/iOS/CocoaAsyncSocket.framework/Headers/CocoaAsyncSocket.h"
+- "/Users/Tibbers/Google Drive/2016Spring/RealTimeSystems/project/test/Socket-Implement/socket/Carthage/Build/iOS/CocoaAsyncSocket.framework/Modules/module.modulemap"
+interface-hash: "220b2064a88a3e74ab8eb9856362be6b"
