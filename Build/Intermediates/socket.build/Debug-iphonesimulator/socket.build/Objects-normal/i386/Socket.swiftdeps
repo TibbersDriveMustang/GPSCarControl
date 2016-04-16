@@ -13,19 +13,19 @@ provides-member:
 - ["C6socket6Socket", ""]
 provides-dynamic-lookup:
 depends-top-level:
-- "c_ytcpsocket_pull"
-- "UnsafePointer"
-- "Int8"
-- "c_ytcpsocket_send"
-- "Socket"
-- "c_ytcpsocket_accept"
-- "String"
-- "Int"
-- "c_ytcpsocket_close"
-- "UInt8"
 - "Int32"
 - "c_ytcpsocket_listen"
 - "c_ytcpsocket_connect"
+- "UnsafePointer"
+- "c_ytcpsocket_accept"
+- "Int8"
+- "c_ytcpsocket_pull"
+- "c_ytcpsocket_send"
+- "c_ytcpsocket_close"
+- "UInt8"
+- "Int"
+- "Socket"
+- "String"
 depends-member:
 - !private ["PSs9AnyObject", "addr"]
 - !private ["PSs9AnyObject", "c_ytcpsocket_close"]

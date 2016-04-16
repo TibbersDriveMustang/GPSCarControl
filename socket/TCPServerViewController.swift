@@ -20,6 +20,16 @@ class TCPServerViewController: UIViewController {
     
     @IBOutlet weak var receivedMsg: UILabel!
     
+    /*                  For UDP                   */
+    
+    
+    @IBOutlet weak var UDPLocalPort: UITextField!
+    
+    @IBOutlet weak var UDPRemotePort: UITextField!
+    
+    @IBOutlet weak var UDPMsgToSend: UITextField!
+    
+    
     var server: TCPServer!
     
     var client: TCPClient!
@@ -92,9 +102,8 @@ extension TCPServerViewController: TCPServerDelegate {
         
         dispatch_async(dispatch_get_main_queue()) { [weak self] in
             self?.alert("Alert", msg: "connected client addr: \(client.addr)")
-
-            // Show CarIP on the mainboard
-            self?.carIP.text = "\(client.addr)"
+            
+            self?.carIP.text = "\(client.addr)"      // Show CarIP on the mainboard
         }
         
         /*********************************************************/

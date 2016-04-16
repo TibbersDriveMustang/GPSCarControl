@@ -144,6 +144,9 @@ SWIFT_CLASS("_TtC6socket23TCPServerViewController")
 @property (nonatomic, weak) IBOutlet UILabel * __null_unspecified carIP;
 @property (nonatomic, weak) IBOutlet UITextField * __null_unspecified sendedMsg;
 @property (nonatomic, weak) IBOutlet UILabel * __null_unspecified receivedMsg;
+@property (nonatomic, weak) IBOutlet UITextField * __null_unspecified UDPLocalPort;
+@property (nonatomic, weak) IBOutlet UITextField * __null_unspecified UDPRemotePort;
+@property (nonatomic, weak) IBOutlet UITextField * __null_unspecified UDPMsgToSend;
 @property (nonatomic, copy) NSString * __null_unspecified clientIP;
 - (void)viewDidLoad;
 - (IBAction)bind:(UIButton * __nonnull)sender;

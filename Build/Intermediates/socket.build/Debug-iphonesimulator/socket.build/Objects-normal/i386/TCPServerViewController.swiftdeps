@@ -7,46 +7,49 @@ provides-member:
 - ["C6socket23TCPServerViewController", ""]
 provides-dynamic-lookup:
 - "port"
-- "alert"
 - "clientIP"
-- "viewDidLoad"
-- "sendedMsg"
 - "textFieldShouldReturn"
-- "bind"
-- "localIP"
-- "sendMsg"
+- "UDPMsgToSend"
+- "UDPLocalPort"
 - "receivedMsg"
+- "sendMsg"
+- "alert"
+- "viewDidLoad"
+- "localIP"
+- "bind"
+- "UDPRemotePort"
+- "sendedMsg"
 - "carIP"
 depends-top-level:
-- !private "UIAlertActionStyle"
-- "UIViewController"
-- "NSData"
-- !private "!="
-- !private "dispatch_async"
-- !private "NSUTF8StringEncoding"
-- "Bool"
-- !private "UIAlertController"
-- "UnicodeScalarType"
-- "TCPServerViewController"
-- !private "StringLiteralType"
-- "TCPServerDelegate"
-- !private "dispatch_get_main_queue"
-- !private "=="
 - "AnyObject"
+- "TCPServerDelegate"
+- "TCPServerViewController"
+- "UIViewController"
+- !private "NSString"
+- !private "=="
+- !private "print"
+- !private "UIAlertController"
+- !private "UIAlertControllerStyle"
+- "String"
+- !private "IPAddress"
+- "NSData"
+- "Int"
+- !private "StringLiteralType"
+- "UITextFieldDelegate"
+- !private "dispatch_async"
+- !private "!="
+- "UITextField"
+- "TCPServer"
+- !private "dispatch_get_main_queue"
+- "UIButton"
+- "TCPClient"
+- "Bool"
+- !private "NSUTF8StringEncoding"
+- "UnicodeScalarType"
+- !private "UIAlertActionStyle"
 - !private "UIAlertAction"
 - !private "BooleanLiteralType"
-- !private "NSString"
-- !private "print"
-- "TCPClient"
-- "UIButton"
-- "TCPServer"
 - "UILabel"
-- "UITextFieldDelegate"
-- "String"
-- "Int"
-- !private "UIAlertControllerStyle"
-- "UITextField"
-- !private "IPAddress"
 depends-member:
 - !private ["PSs9AnyObject", "IPAddress"]
 - !private ["PSs9AnyObject", "Int"]
@@ -54,6 +57,9 @@ depends-member:
 - !private ["PSs9AnyObject", "NSUTF8StringEncoding"]
 - !private ["PSs9AnyObject", "TCPClient"]
 - !private ["PSs9AnyObject", "TCPServer"]
+- ["PSs9AnyObject", "UDPLocalPort"]
+- ["PSs9AnyObject", "UDPMsgToSend"]
+- ["PSs9AnyObject", "UDPRemotePort"]
 - !private ["PSs9AnyObject", "UIAlertAction"]
 - !private ["PSs9AnyObject", "UIAlertActionStyle"]
 - !private ["PSs9AnyObject", "UIAlertController"]
@@ -125,6 +131,9 @@ depends-member:
 - !private ["PSs11CVarArgType", "NSUTF8StringEncoding"]
 - !private ["PSs11CVarArgType", "TCPClient"]
 - !private ["PSs11CVarArgType", "TCPServer"]
+- ["PSs11CVarArgType", "UDPLocalPort"]
+- ["PSs11CVarArgType", "UDPMsgToSend"]
+- ["PSs11CVarArgType", "UDPRemotePort"]
 - !private ["PSs11CVarArgType", "UIAlertAction"]
 - !private ["PSs11CVarArgType", "UIAlertActionStyle"]
 - !private ["PSs11CVarArgType", "UIAlertController"]
@@ -188,6 +197,9 @@ depends-member:
 - !private ["PSs23CustomStringConvertible", "SubSequence"]
 - !private ["PSs23CustomStringConvertible", "TCPClient"]
 - !private ["PSs23CustomStringConvertible", "TCPServer"]
+- ["PSs23CustomStringConvertible", "UDPLocalPort"]
+- ["PSs23CustomStringConvertible", "UDPMsgToSend"]
+- ["PSs23CustomStringConvertible", "UDPRemotePort"]
 - !private ["PSs23CustomStringConvertible", "UIAlertAction"]
 - !private ["PSs23CustomStringConvertible", "UIAlertActionStyle"]
 - !private ["PSs23CustomStringConvertible", "UIAlertController"]
@@ -237,6 +249,9 @@ depends-member:
 - !private ["PSs9Equatable", "NSUTF8StringEncoding"]
 - !private ["PSs9Equatable", "TCPClient"]
 - !private ["PSs9Equatable", "TCPServer"]
+- ["PSs9Equatable", "UDPLocalPort"]
+- ["PSs9Equatable", "UDPMsgToSend"]
+- ["PSs9Equatable", "UDPRemotePort"]
 - !private ["PSs9Equatable", "UIAlertAction"]
 - !private ["PSs9Equatable", "UIAlertActionStyle"]
 - !private ["PSs9Equatable", "UIAlertController"]
@@ -289,6 +304,9 @@ depends-member:
 - !private ["PSs8Hashable", "NSUTF8StringEncoding"]
 - !private ["PSs8Hashable", "TCPClient"]
 - !private ["PSs8Hashable", "TCPServer"]
+- ["PSs8Hashable", "UDPLocalPort"]
+- ["PSs8Hashable", "UDPMsgToSend"]
+- ["PSs8Hashable", "UDPRemotePort"]
 - !private ["PSs8Hashable", "UIAlertAction"]
 - !private ["PSs8Hashable", "UIAlertActionStyle"]
 - !private ["PSs8Hashable", "UIAlertController"]
@@ -376,6 +394,9 @@ depends-member:
 - !private ["PSo8NSCoding", "NSUTF8StringEncoding"]
 - !private ["PSo8NSCoding", "TCPClient"]
 - !private ["PSo8NSCoding", "TCPServer"]
+- ["PSo8NSCoding", "UDPLocalPort"]
+- ["PSo8NSCoding", "UDPMsgToSend"]
+- ["PSo8NSCoding", "UDPRemotePort"]
 - !private ["PSo8NSCoding", "UIAlertAction"]
 - !private ["PSo8NSCoding", "UIAlertActionStyle"]
 - !private ["PSo8NSCoding", "UIAlertController"]
@@ -417,6 +438,9 @@ depends-member:
 - !private ["PSo26NSExtensionRequestHandling", "NSUTF8StringEncoding"]
 - !private ["PSo26NSExtensionRequestHandling", "TCPClient"]
 - !private ["PSo26NSExtensionRequestHandling", "TCPServer"]
+- ["PSo26NSExtensionRequestHandling", "UDPLocalPort"]
+- ["PSo26NSExtensionRequestHandling", "UDPMsgToSend"]
+- ["PSo26NSExtensionRequestHandling", "UDPRemotePort"]
 - !private ["PSo26NSExtensionRequestHandling", "UIAlertAction"]
 - !private ["PSo26NSExtensionRequestHandling", "UIAlertActionStyle"]
 - !private ["PSo26NSExtensionRequestHandling", "UIAlertController"]
@@ -459,6 +483,9 @@ depends-member:
 - ["CSo8NSObject", "String"]
 - ["CSo8NSObject", "TCPClient"]
 - ["CSo8NSObject", "TCPServer"]
+- ["CSo8NSObject", "UDPLocalPort"]
+- ["CSo8NSObject", "UDPMsgToSend"]
+- ["CSo8NSObject", "UDPRemotePort"]
 - !private ["CSo8NSObject", "UIAlertAction"]
 - !private ["CSo8NSObject", "UIAlertActionStyle"]
 - !private ["CSo8NSObject", "UIAlertController"]
@@ -503,6 +530,9 @@ depends-member:
 - !private ["PSo16NSObjectProtocol", "NSUTF8StringEncoding"]
 - !private ["PSo16NSObjectProtocol", "TCPClient"]
 - !private ["PSo16NSObjectProtocol", "TCPServer"]
+- ["PSo16NSObjectProtocol", "UDPLocalPort"]
+- ["PSo16NSObjectProtocol", "UDPMsgToSend"]
+- ["PSo16NSObjectProtocol", "UDPRemotePort"]
 - !private ["PSo16NSObjectProtocol", "UIAlertAction"]
 - !private ["PSo16NSObjectProtocol", "UIAlertActionStyle"]
 - !private ["PSo16NSObjectProtocol", "UIAlertController"]
@@ -639,6 +669,9 @@ depends-member:
 - ["C6socket23TCPServerViewController", "String"]
 - ["C6socket23TCPServerViewController", "TCPClient"]
 - ["C6socket23TCPServerViewController", "TCPServer"]
+- ["C6socket23TCPServerViewController", "UDPLocalPort"]
+- ["C6socket23TCPServerViewController", "UDPMsgToSend"]
+- ["C6socket23TCPServerViewController", "UDPRemotePort"]
 - !private ["C6socket23TCPServerViewController", "UIAlertAction"]
 - !private ["C6socket23TCPServerViewController", "UIAlertActionStyle"]
 - !private ["C6socket23TCPServerViewController", "UIAlertController"]
@@ -689,6 +722,9 @@ depends-member:
 - !private ["PSo21UIAppearanceContainer", "NSUTF8StringEncoding"]
 - !private ["PSo21UIAppearanceContainer", "TCPClient"]
 - !private ["PSo21UIAppearanceContainer", "TCPServer"]
+- ["PSo21UIAppearanceContainer", "UDPLocalPort"]
+- ["PSo21UIAppearanceContainer", "UDPMsgToSend"]
+- ["PSo21UIAppearanceContainer", "UDPRemotePort"]
 - !private ["PSo21UIAppearanceContainer", "UIAlertAction"]
 - !private ["PSo21UIAppearanceContainer", "UIAlertActionStyle"]
 - !private ["PSo21UIAppearanceContainer", "UIAlertController"]
@@ -729,6 +765,9 @@ depends-member:
 - !private ["PSo18UIContentContainer", "NSUTF8StringEncoding"]
 - !private ["PSo18UIContentContainer", "TCPClient"]
 - !private ["PSo18UIContentContainer", "TCPServer"]
+- ["PSo18UIContentContainer", "UDPLocalPort"]
+- ["PSo18UIContentContainer", "UDPMsgToSend"]
+- ["PSo18UIContentContainer", "UDPRemotePort"]
 - !private ["PSo18UIContentContainer", "UIAlertAction"]
 - !private ["PSo18UIContentContainer", "UIAlertActionStyle"]
 - !private ["PSo18UIContentContainer", "UIAlertController"]
@@ -775,6 +814,9 @@ depends-member:
 - !private ["PSo18UIFocusEnvironment", "NSUTF8StringEncoding"]
 - !private ["PSo18UIFocusEnvironment", "TCPClient"]
 - !private ["PSo18UIFocusEnvironment", "TCPServer"]
+- ["PSo18UIFocusEnvironment", "UDPLocalPort"]
+- ["PSo18UIFocusEnvironment", "UDPMsgToSend"]
+- ["PSo18UIFocusEnvironment", "UDPRemotePort"]
 - !private ["PSo18UIFocusEnvironment", "UIAlertAction"]
 - !private ["PSo18UIFocusEnvironment", "UIAlertActionStyle"]
 - !private ["PSo18UIFocusEnvironment", "UIAlertController"]
@@ -823,6 +865,9 @@ depends-member:
 - ["CSo11UIResponder", "String"]
 - ["CSo11UIResponder", "TCPClient"]
 - ["CSo11UIResponder", "TCPServer"]
+- ["CSo11UIResponder", "UDPLocalPort"]
+- ["CSo11UIResponder", "UDPMsgToSend"]
+- ["CSo11UIResponder", "UDPRemotePort"]
 - !private ["CSo11UIResponder", "UIAlertAction"]
 - !private ["CSo11UIResponder", "UIAlertActionStyle"]
 - !private ["CSo11UIResponder", "UIAlertController"]
@@ -865,6 +910,9 @@ depends-member:
 - !private ["PSo16UIStateRestoring", "NSUTF8StringEncoding"]
 - !private ["PSo16UIStateRestoring", "TCPClient"]
 - !private ["PSo16UIStateRestoring", "TCPServer"]
+- ["PSo16UIStateRestoring", "UDPLocalPort"]
+- ["PSo16UIStateRestoring", "UDPMsgToSend"]
+- ["PSo16UIStateRestoring", "UDPRemotePort"]
 - !private ["PSo16UIStateRestoring", "UIAlertAction"]
 - !private ["PSo16UIStateRestoring", "UIAlertActionStyle"]
 - !private ["PSo16UIStateRestoring", "UIAlertController"]
@@ -943,6 +991,9 @@ depends-member:
 - !private ["PSo18UITraitEnvironment", "NSUTF8StringEncoding"]
 - !private ["PSo18UITraitEnvironment", "TCPClient"]
 - !private ["PSo18UITraitEnvironment", "TCPServer"]
+- ["PSo18UITraitEnvironment", "UDPLocalPort"]
+- ["PSo18UITraitEnvironment", "UDPMsgToSend"]
+- ["PSo18UITraitEnvironment", "UDPRemotePort"]
 - !private ["PSo18UITraitEnvironment", "UIAlertAction"]
 - !private ["PSo18UITraitEnvironment", "UIAlertActionStyle"]
 - !private ["PSo18UITraitEnvironment", "UIAlertController"]
@@ -990,6 +1041,9 @@ depends-member:
 - ["CSo16UIViewController", "String"]
 - ["CSo16UIViewController", "TCPClient"]
 - ["CSo16UIViewController", "TCPServer"]
+- ["CSo16UIViewController", "UDPLocalPort"]
+- ["CSo16UIViewController", "UDPMsgToSend"]
+- ["CSo16UIViewController", "UDPRemotePort"]
 - !private ["CSo16UIViewController", "UIAlertAction"]
 - !private ["CSo16UIViewController", "UIAlertActionStyle"]
 - !private ["CSo16UIViewController", "UIAlertController"]
@@ -1217,4 +1271,4 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/i386/CoreGraphics.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/i386/UIKit.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphonesimulator/i386/CoreImage.swiftmodule"
-interface-hash: "c1fa62dae84b0d960f2bb0eff10ffd56"
+interface-hash: "3b205b243a7ad63387115500deee0707"

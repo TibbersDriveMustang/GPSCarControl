@@ -20,6 +20,7 @@
 		5D9482051B873FA100137E75 /* IPAddress.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D9482041B873FA100137E75 /* IPAddress.m */; };
 		5D94820F1B875EC900137E75 /* ytcpsocket.c in Sources */ = {isa = PBXBuildFile; fileRef = 5D94820A1B875EC900137E75 /* ytcpsocket.c */; };
 		70E8C80F1CB35103002136B4 /* app_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 70E8C80E1CB35103002136B4 /* app_icon.png */; };
+		70E8C8131CC1D777002136B4 /* CocoaAsyncSocket.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70E8C8121CC1D777002136B4 /* CocoaAsyncSocket.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +53,7 @@
 		5D94820A1B875EC900137E75 /* ytcpsocket.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ytcpsocket.c; sourceTree = "<group>"; };
 		5D9482141B87629A00137E75 /* IPAddress.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = IPAddress.h; path = ../IPAddress.h; sourceTree = "<group>"; };
 		70E8C80E1CB35103002136B4 /* app_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = app_icon.png; sourceTree = "<group>"; };
+		70E8C8121CC1D777002136B4 /* CocoaAsyncSocket.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CocoaAsyncSocket.framework; path = socket/Carthage/Build/iOS/CocoaAsyncSocket.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				70E8C8131CC1D777002136B4 /* CocoaAsyncSocket.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -75,6 +78,7 @@
 		5D9481CB1B87088700137E75 = {
 			isa = PBXGroup;
 			children = (
+				70E8C8121CC1D777002136B4 /* CocoaAsyncSocket.framework */,
 				5D9481D61B87088700137E75 /* socket */,
 				5D9481EC1B87088700137E75 /* socketTests */,
 				5D9481D51B87088700137E75 /* Products */,
@@ -389,6 +393,11 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/socket",
+					"$(PROJECT_DIR)/socket/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = socket/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Hongyi.socket;
@@ -407,6 +416,11 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/socket",
+					"$(PROJECT_DIR)/socket/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = socket/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Hongyi.socket;
